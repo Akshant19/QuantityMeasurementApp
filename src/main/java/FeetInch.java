@@ -11,8 +11,8 @@ public class FeetInch {
         System.out.println("enter value2");
         double value2 = sc.nextDouble();
 
-        Measurement m1 = new Measurement(value1,LengthUnit.FEET);
-        Measurement m2 = new Measurement(value2,LengthUnit.INCH);
+        Measurement m1 = new Measurement(value1,LengthUnit1.FEET);
+        Measurement m2 = new Measurement(value2,LengthUnit1.INCH);
 
         System.out.println("m1 Equal m2:" + m1.equals(m2));
     }
@@ -26,6 +26,7 @@ enum LengthUnit{
     private final double conversionFactortoFeet;
 
     LengthUnit(double conversionFactortoFeet){
+
         this.conversionFactortoFeet = conversionFactortoFeet;
     }
 
@@ -34,12 +35,12 @@ enum LengthUnit{
     }
 }
 
-class Measurement{
+class Measurement1{
 
     private final double value;
     private final LengthUnit unit;
 
-  public  Measurement(double value,LengthUnit unit) {
+  public  Measurement1(double value,LengthUnit unit) {
 
       if (unit == null) {
           throw new IllegalArgumentException("Unit can not null");
@@ -61,7 +62,7 @@ class Measurement{
             if(obj==null) return false;
             if(getClass()!=obj.getClass()) return false;
 
-            Measurement other = (Measurement) obj;
+            Measurement1 other = (Measurement1) obj;
             return Double.compare(this.toFeet(),other.toFeet())==0;
       }
 
