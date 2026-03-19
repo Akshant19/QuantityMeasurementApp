@@ -38,8 +38,6 @@ class QuantityLength1 {
         this.value = value;
         this.unit = unit;
     }
-
-
     public QuantityLength1 add(QuantityLength1 other) {
 
         if (other == null || other.unit == null) {
@@ -53,9 +51,7 @@ class QuantityLength1 {
 
         double sumInFeet = thisInFeet + otherInFeet;
 
-        
         double result = sumInFeet / this.unit.factor;
-
 
         return new QuantityLength1(result, this.unit);
     }

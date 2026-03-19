@@ -5,20 +5,15 @@ public class ConvertUnit {
         System.out.println(value + " " + from + " = " + result + " " + to);
     }
 
-    static void convertDemo(QuantityLength q, LengthUnit2 to) {
-        double result = q.convertTo(to);
-        System.out.println(q + " = " + result + " " + to);
-    }
+
 
     static void main(String[] args) {
 
         convertDemo(1, LengthUnit2.FEET, LengthUnit2.INCHES);
         convertDemo(3, LengthUnit2.YARDS, LengthUnit2.FEET);
 
-        QuantityLength q = new QuantityLength(36, LengthUnit2.INCHES);
-        convertDemo(q, LengthUnit2.YARDS);
 
-        // equals demo
+
         QuantityLength a = new QuantityLength(1, LengthUnit2.FEET);
         QuantityLength b = new QuantityLength(12, LengthUnit2.INCHES);
 
@@ -55,10 +50,6 @@ class QuantityLength {
     }
 
 
-    double convertTo(LengthUnit2 target) {
-        double base = value * unit.factor;
-        return base / target.factor;
-    }
 
 
     static double convert(double value, LengthUnit2 from, LengthUnit2 to) {
