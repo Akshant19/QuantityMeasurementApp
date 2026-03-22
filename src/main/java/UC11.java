@@ -91,7 +91,7 @@
         Quantity<VolumeUnit> v2 = new Quantity<>(1000.0, VolumeUnit.MILLILITRE);
         Quantity<VolumeUnit> v3 = new Quantity<>(1.0, VolumeUnit.GALLON);
 
-    
+
         System.out.println("1L == 1000mL: " + v1.equals(v2)); // true
         System.out.println("1 Gallon == 3.78541L: " + v3.equals(v1)); // true
 
