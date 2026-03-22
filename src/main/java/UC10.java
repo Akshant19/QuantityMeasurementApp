@@ -158,7 +158,7 @@ public class UC10 {
         demonstrateConversion(w1, WeightUnitUC10.GRAM);
         demonstrateAddition(w1, w2, WeightUnitUC10.KILOGRAM);
 
-        
+
         QuantityUC10<LengthUnitUC10> l =
                 new QuantityUC10<>(1.0, LengthUnitUC10.FEET);
 
