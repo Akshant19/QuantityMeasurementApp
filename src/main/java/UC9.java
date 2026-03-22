@@ -44,7 +44,7 @@ enum WeightUnit {
         return value * factor;
     }
 
-  
+
     public double fromBase(double baseValue) {
         return baseValue / factor;
     }
